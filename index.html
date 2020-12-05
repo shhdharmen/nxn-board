@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css" />
+
+    <title>NxN Board</title>
+  </head>
+  <body>
+    <!-- #region user config -->
+    <section>
+      <!-- #region select level -->
+      <label for="level-select">Choose a level:</label>
+
+      <select name="levels" id="level-select">
+        <option value="" selected>--Please choose an option--</option>
+        <option value="3">Easy (3x3)</option>
+        <option value="4">Medium (4x4)</option>
+        <option value="6">Hard (6x6)</option>
+      </select>
+      <!-- #endregion -->
+
+      <button id="start-button" disabled>Start</button>
+
+      <span>⚡ High Score: <b id="highest-score">0</b></span>
+    </section>
+    <!-- #endregion -->
+
+    <!-- #region game board -->
+    <section id="game-board-container" class="d-none">
+      <h2 class="game-timer">
+        ⏲️ <span id="game-timer"></span> seconds remaining
+      </h2>
+      <h3 class="current-score">
+        📊 Current Score: <span id="current-score">0</span>
+      </h3>
+
+      <table>
+        <tbody id="game-board"></tbody>
+      </table>
+    </section>
+    <!-- #endregion -->
+
+    <!-- JavaScript -->
+    <script src="./index.js"></script>
+  </body>
+</html>
